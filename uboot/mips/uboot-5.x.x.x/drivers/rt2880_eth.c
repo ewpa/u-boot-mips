@@ -2113,9 +2113,9 @@ void rt305x_esw_init(void)
 #elif defined (MT7628_ASIC_BOARD)
 /*TODO: Init MT7628 ASIC PHY HERE*/
 	i = RALINK_REG(RT2880_AGPIOCFG_REG);
-	i &= ~(MT7628_P0_EPHY_AIO_EN);
 #if defined (ETH_ONE_PORT_ONLY)
 	i |= MT7628_EPHY_EN;
+	i &= ~(MT7628_P0_EPHY_AIO_EN);
 #else
 	i &= ~(MT7628_EPHY_EN);
 #endif
